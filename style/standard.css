@@ -10,16 +10,6 @@ body
 	overflow: hidden;
 }
 
-#test
-{
-	height: 150px;
-	width:750px;
-	background-color: aqua;
-	display: block;
-	margin: auto;
-	position: relative;
-	margin-top: 300px;
-}
 /*********************************************************************************/
 /* Fonts                                                                         */
 /*********************************************************************************/

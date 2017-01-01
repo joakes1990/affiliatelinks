@@ -2,8 +2,11 @@
 var styles = [];
 var displayedIndex = 0;
 
-function test() {
-	console.log("Hello");
+setInterval(function() {
+	cycleStyle();
+	}, 18000);
+function cycleStyle() {
+	
 	// Slide right background over left
 	var backgroundWidth = header.getBoundingClientRect().width;
 	var backgrounds = document.getElementsByClassName("background");
@@ -34,7 +37,7 @@ function test() {
 		container.appendChild(newBackground);
 		layoutBackgrounds(backgroundWidth);
 		applyStyles();
-		}, 1500);
+		}, 15000);
 }
 
 function pageSetup() {
