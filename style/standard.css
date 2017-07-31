@@ -1,0 +1,22 @@
+
+body
+{
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	display: block;
+	height: 1024px;
+}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+#header
+ {
+	margin-top: 0px;
+	width: auto;
+	height: 275px;
+
+	background-color: #f02fe6;
+}
