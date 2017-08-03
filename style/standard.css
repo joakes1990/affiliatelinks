@@ -25,10 +25,32 @@ body
 .background
 {
 	top: 0px;
-	width: auto;
+	width: 100%;
 	min-width: 1024px;
 	height: 275px;
 	z-index: 1;
+	display: inline-block;
+/* 	overflow: hidden; */
+	position: absolute;
+}
+
+.background p
+{
+	top: 130px;
+	position: absolute;
+	display: inline-block;
+	margin: 0px;
+	font-family: "Avenir black", "Avenir-Black", sans-serif;
+	font-weight: 800;
+	font-size: 72px;
+}
+
+.background div
+{
+	height: 275px;
+	min-width: 515px;
+	width: 25%;
+	display: inline-block;
 }
 
 /*********************************************************************************/

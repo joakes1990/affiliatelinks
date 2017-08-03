@@ -12,20 +12,18 @@
 	<link "https://whatsmynext.deals">
 	<link href="style/background.css" rel="stylesheet" type="text/css"/>
 	<link href="style/standard.css" rel="stylesheet" type="text/css"/>
+	<script src="scripts/background.js"></script>
 <!-- 	<link rel="icon" type="image/png" href="images/favicon.png"> -->
 </head>
-<body>
-	<div id="dbackground1" class="background">
-		
+<body onload="layoutBackgrounds()" onresize="layoutBackgrounds()">
+	<div id="dbackgroundcurrent" class="background">
+		<div></div>
+		<p>item</p>
 	</div>
-<!--
-	<div id="dbackground1" class="background">
-		
+	<div id="dbackgroundnext" class="background">
+		<div></div>
+		<p>item</p>
 	</div>
-	<div id="dbackground2" class="background">
-		
-	</div>
--->
 	<div id="header">
 		<div class="flex-margin" style="float: left"></div>
 			<div id="dheaderContents">
