@@ -1,0 +1,25 @@
+
+/*********************************************************************************/
+/* Skateboard style                                                              */
+/*********************************************************************************/
+
+.skate #iheader
+{
+	background-image: url("images/skateboard/skateboard croped low res.jpg");
+	
+}
+
+.skate #lTitle
+{
+	color: #333639;
+}
+
+.skate #dUnderline
+{
+	background-color: #333639;
+}
+
+.skate #lItem
+{
+	color: #46a356;
+}
