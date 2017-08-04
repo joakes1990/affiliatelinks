@@ -3,23 +3,33 @@
 /* Skateboard style                                                              */
 /*********************************************************************************/
 
-.skate #iheader
+.skate
 {
-	background-image: url("images/skateboard/skateboard croped low res.jpg");
+	background-image: url("../images/skateboard/skateboard_croped_high_res.jpg");
+	background-color: #cecdc8;
 	
 }
 
-.skate #lTitle
+.skate-blur
+{
+	background-color: #cecdc8cc;
+}
+.skate-title
 {
 	color: #333639;
 }
 
-.skate #dUnderline
+.skate-underline
 {
 	background-color: #333639;
 }
 
-.skate #lItem
+.skate-item
 {
 	color: #46a356;
+}
+
+.skate-item::before
+{
+	content: "skateboard";
 }

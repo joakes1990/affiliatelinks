@@ -10,19 +10,23 @@
 	<meta name="generator" content="BBEdit 11.1" />
 	<meta "https://whatsmynext.deals">
 	<link "https://whatsmynext.deals">
-	<link href="style/background.css" rel="stylesheet" type="text/css"/>
+	<link href="style/background.css" rel="stylesheet" type="text/css" name="backgroundStyles"/>
 	<link href="style/standard.css" rel="stylesheet" type="text/css"/>
 	<script src="scripts/background.js"></script>
 <!-- 	<link rel="icon" type="image/png" href="images/favicon.png"> -->
 </head>
-<body onload="layoutBackgrounds()" onresize="layoutBackgrounds()">
+<body onload="pageSetup()" onresize="layoutBackgrounds()">
 	<div id="dbackgroundcurrent" class="background">
-		<div></div>
-		<p>item</p>
+		<div class="blurcontainer" style="float: left"></div>
+		<div class="backgroundspacer"></div>
+		<p class="lItem"></p>
+		<div class="blurcontainer" style="float: right"></div>
 	</div>
 	<div id="dbackgroundnext" class="background">
-		<div></div>
-		<p>item</p>
+		<div class="blurcontainer" style="float: left"></div>
+		<div class="backgroundspacer"></div>
+		<p class="lItems"></p>
+		<div class="blurcontainer" style="float: right"></div>
 	</div>
 	<div id="header">
 		<div class="flex-margin" style="float: left"></div>

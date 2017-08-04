@@ -7,6 +7,7 @@ body
 	display: block;
 	height: 1024px;
 	min-width: 1024px;
+	overflow: hidden;
 }
 
 /*********************************************************************************/
@@ -15,7 +16,7 @@ body
 
 @font-face {
 	font-family: Avenir;
-	src: local(Avenir), url(fonts/Avenir.ttc) format('opentype');
+	src: local(Avenir), url(../fonts/Avenir.ttc) format('opentype');
 }
 
 /*********************************************************************************/
@@ -30,8 +31,9 @@ body
 	height: 275px;
 	z-index: 1;
 	display: inline-block;
-/* 	overflow: hidden; */
 	position: absolute;
+	background-position: center center;
+	background-repeat: repeat-x;
 }
 
 .background p
@@ -45,12 +47,16 @@ body
 	font-size: 72px;
 }
 
-.background div
+.backgroundspacer
 {
 	height: 275px;
-	min-width: 515px;
-	width: 25%;
 	display: inline-block;
+}
+
+.blurcontainer
+{
+	height: 100%;
+	width: 0px;
 }
 
 /*********************************************************************************/
@@ -101,12 +107,13 @@ body
 	font-family: "Avenir Black", "Avenir-Black", sans-serif;
 	font-weight: 800;
 	font-size: 72px;
+	transition: color 1s ease-in-out;
 }
 
 #dLineContainer
 {
 	top: 0px;
-	margin: 0px 0px 0px 10px;
+	margin: 0px 0px 0px 25px;
 	height: 235px;
 	min-width: 375px;
 	max-width: 45%;
@@ -122,6 +129,7 @@ body
 	width: inherit;
 	display: inline-flex;
 	background-color: black;
+	transition: color 1s ease-in-out;
 }
 
 .flex-margin
