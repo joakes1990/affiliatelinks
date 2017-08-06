@@ -4,12 +4,37 @@ var displayedIndex = 0;
 
 function test() {
 	console.log("Hello");
+	// Slide right background over left
 	var backgroundWidth = header.getBoundingClientRect().width;
 	var backgrounds = document.getElementsByClassName("background");
 	var title = document.getElementById("lTitle");
 	backgrounds[1].style.left = 0 + "px";
 	title.classList.remove(styles[displayedIndex] + "-title");
 	title.classList.add(styles[displayedIndex + 1] + "-title");
+	
+	setTimeout(function() {
+		var container = document.getElementById("backgroundcontainer");
+		backgrounds[0].remove();
+		var newBackground = document.createElement("div");
+		newBackground.classList.add("background");
+		var leftBlur = document.createElement("div")
+		leftBlur.classList.add("blurcontainer")
+		leftBlur.style.cssFloat = "left";
+		newBackground.appendChild(leftBlur);
+		var spacer = document.createElement("div");
+		spacer.classList.add("backgroundspacer");
+		newBackground.appendChild(spacer);
+		var item = document.createElement("p");
+		item.classList.add("lItem");
+		newBackground.appendChild(item);
+		var rightBlur = document.createElement("div");
+		rightBlur.classList.add("blurcontainer");
+		rightBlur.style.cssFloat = "right";
+		newBackground.appendChild(rightBlur);
+		container.appendChild(newBackground);
+		layoutBackgrounds(backgroundWidth);
+		applyStyles();
+		}, 1500);
 }
 
 function pageSetup() {
@@ -18,8 +43,9 @@ function pageSetup() {
 	applyStyles();
 }
 
-function layoutBackgrounds() {
+function layoutBackgrounds(width) {
 	// Elements
+	var documentWidth = width !== undefined ? width : document.body.getBoundingClientRect().width;
 	var header = document.getElementById("header");
 	var backgrounds = document.getElementsByClassName("background");
 	var currentBackground = backgrounds[0];
@@ -27,7 +53,6 @@ function layoutBackgrounds() {
 	var underline = document.getElementById("dUnderline");
 	var itemSpacers = document.getElementsByClassName("backgroundspacer");
 
-	var documentWidth = header.getBoundingClientRect().width;
 	nextBackground.style.left = String(documentWidth) + "px";
 
 	var underlineLeft = underline.getBoundingClientRect().left;
@@ -52,18 +77,15 @@ function layoutBackgrounds() {
 
 function applyStyles() {
 	//Indexes
-	var newIndex = displayedIndex == (styles.length - 1) ? 0 : displayedIndex ++;
-	var nextIndex = newIndex == (styles.length - 1) ? 0 : newIndex ++;
+	var newIndex = displayedIndex == (styles.length - 1) ? 0 : (displayedIndex + 1);
 	
 	// Styles
 	var currentStyle = styles[displayedIndex];
 	var newStyle = styles[newIndex];
-	var nextStyle = styles[nextIndex];
 	var currentBlurStyle = currentStyle + "-blur";
 	var newBlurStyle = newStyle + "-blur";
 	var currentItemStyle = currentStyle + "-item";
 	var newItemStyle = newStyle + "-item";
-	var nextItemStyle = nextStyle + "-item"
 	var currentTitleStyle = currentStyle + "-title";
 	var newTitleStyle = newStyle + "-title";
 	
@@ -73,20 +95,20 @@ function applyStyles() {
 	var title = document.getElementById("lTitle");
 	var currentItem = currentBackground.getElementsByTagName("p")[0];
 	var underline = document.getElementById("dUnderline");
-	var nextBackground = backgrounds[1];
-	var nextItem = nextBackground.getElementsByTagName("p")[0];
+	var newBackground = backgrounds[1];
+	var newItem = newBackground.getElementsByTagName("p")[0];
 	var blurcontainers = document.getElementsByClassName("blurcontainer");
 		
 	
 	// Changing classes
-	currentBackground.classList.remove(currentStyle);
-	currentBackground.classList.add(newStyle);
-	currentItem.classList.remove(currentItemStyle);
-	currentItem.classList.add(newItemStyle);
-	nextBackground.classList.remove(newTitleStyle);
-	nextBackground.classList.add(nextStyle);
-	nextItem.classList.remove(newItemStyle);
-	nextItem.classList.add(nextItemStyle);
+// 	currentBackground.classList.remove(currentStyle);
+	currentBackground.classList.add(currentStyle);
+// 	currentItem.classList.remove(currentItemStyle);
+	currentItem.classList.add(currentItemStyle);
+// 	newBackground.classList.remove(newTitleStyle);
+	newBackground.classList.add(newStyle);
+// 	newItem.classList.remove(newItemStyle);
+	newItem.classList.add(newItemStyle);
 	for (var i = 0; i < blurcontainers.length; i++) {
 			blurcontainers[i].classList.remove(currentBlurStyle);
 			blurcontainers[i].classList.add(newBlurStyle);
@@ -97,6 +119,8 @@ function applyStyles() {
 	title.classList.add(newTitleStyle);
 	underline.classList.remove(currentTitleStyle);
 	underline.classList.add(newTitleStyle);
+	
+	displayedIndex = newIndex;
 }
 
 function shuffle() {
