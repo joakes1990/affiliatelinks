@@ -31,5 +31,146 @@
 
 .skate-item::before
 {
-	content: "skateboard";
+	content: "ride";
 }
+
+/*********************************************************************************/
+/* Coffee style                                                                  */
+/*********************************************************************************/
+
+.coffee
+{
+	background-image: url("../images/coffee/coffee_ croped_high_res.jpg");
+	background-color: #4b3631;
+	
+}
+
+.coffee-blur
+{
+	background-color: #4b3631cc;
+}
+.coffee-title
+{
+	color: #ffffcc;
+}
+
+.coffee-underline
+{
+	background-color: #533419;
+}
+
+.coffee-item
+{
+	color: #FF6600;
+}
+
+.coffee-item::before
+{
+	content: "caffeine fix";
+}
+
+/*********************************************************************************/
+/* Photographer style                                                            */
+/*********************************************************************************/
+
+.photographer
+{
+	background-image: url("../images/photographer/photographer_croped_high_res.jpg");
+	background-color: #656361;
+	
+}
+
+.photographer-blur
+{
+	background-color: #4b3631cc;
+}
+.photographer-title
+{
+	color: #B84E65;
+}
+
+.photographer-underline
+{
+	background-color: #B84E65;
+}
+
+.photographer-item
+{
+	color: #9DBDCD;
+}
+
+.photographer-item::before
+{
+	content: "passion";
+}
+
+/*********************************************************************************/
+/* Shoes style.                                                                  */
+/*********************************************************************************/
+
+.shoes
+{
+	background-image: url("../images/shoes/shoes_croped_high_res.jpg");
+	background-color: #91716e;
+	
+}
+
+.shoes-blur
+{
+	background-color: #91716ecc;
+}
+.shoes-title
+{
+	color: #372F28;
+}
+
+.shoes-underline
+{
+	background-color: #333639;
+}
+
+.shoes-item
+{
+	color: #E5CECD;
+}
+
+.shoes-item::before
+{
+	content: "style";
+}
+
+/*********************************************************************************/
+/* Sunglasses style.                                                             */
+/*********************************************************************************/
+
+.sunglasses
+{
+	background-image: url("../images/sunglasses/sunglasses_croped_high_res.jpg");
+	background-color: #595e63;
+	
+}
+
+.sunglasses-blur
+{
+	background-color: #595e63cc;
+}
+.sunglasses-title
+{
+	color: #81C4B4;
+}
+
+.sunglasses-underline
+{
+	background-color: #595E63;
+}
+
+.sunglasses-item
+{
+	color: #D99A88;
+}
+
+.sunglasses-item::before
+{
+	content: "adventure";
+}
+

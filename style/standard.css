@@ -10,6 +10,16 @@ body
 	overflow: hidden;
 }
 
+#test
+{
+	height: 150px;
+	width:750px;
+	background-color: aqua;
+	display: block;
+	margin: auto;
+	position: relative;
+	margin-top: 300px;
+}
 /*********************************************************************************/
 /* Fonts                                                                         */
 /*********************************************************************************/
@@ -34,6 +44,7 @@ body
 	position: absolute;
 	background-position: center center;
 	background-repeat: repeat-x;
+	transition: left 1s ease-in-out;
 }
 
 .background p
